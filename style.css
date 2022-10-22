@@ -1,0 +1,10 @@
+@import "./nord.css";
+
+body {
+    display: flex;
+}
+
+.calculator {
+    border: 2px solid var(--nord15);
+    color: var(--nord0);
+}
