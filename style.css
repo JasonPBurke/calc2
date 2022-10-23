@@ -39,7 +39,7 @@ body {
     grid-auto-flow: column;
     grid-template-areas: 
     'seven   eight    nine     divide    clear'
-    'four    five     six      multiply  equals'
+    'four    five     six      multiply  back'
     'one     two      three    subtract  equals'
     'zero    decimal  percent  add       equals';
     background-color: var(--nord3);
@@ -57,6 +57,12 @@ body {
     color: var(--nord6);
     border: 1px solid var(--nord0);
     border-radius: 5px;
+}
+
+.number:hover,
+.operator:hover,
+.utility:hover {
+    border: 1px solid var(--nord4);
 }
 
 .number:active,
@@ -113,6 +119,10 @@ body {
 .equals {
     grid-area: equals;
     background-color: var(--nord10);
+}
+.back {
+    grid-area: back;
+    background-color: var(--nord12);
 }
 .multiply {
     grid-area: multiply;
