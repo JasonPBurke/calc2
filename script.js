@@ -12,7 +12,6 @@ let lastKeyPressed;
 
 keys.addEventListener('click', (key) => {
 
-  
   if(key.target.classList.contains('number')) {
     if(display.textContent.includes('%') && captureSecondNumber === 'false') return;
     if(display.textContent === '0' || captureSecondNumber || equalsPressed) { // || currentOperator || equalsPressed) {
@@ -77,6 +76,17 @@ keys.addEventListener('click', (key) => {
   lastKeyPressed = key.target;
 })
 
+/*=============== LIGHT DARK THEME ===============*/ 
+const themeButton = document.getElementById('theme-button')
+const lightTheme = 'light-theme'
+const iconTheme = 'bx-sun'
+
+// Activate/Deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+  // Add/Remove the dark / icon theme
+  document.body.classList.toggle(lightTheme)
+  themeButton.classList.toggle(iconTheme)
+})
 
 
 function operate(a, operator, b) {
