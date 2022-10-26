@@ -1,6 +1,15 @@
 @import "./nord.css";
+@font-face {
+    font-family: futuramaTitle;
+    src: url('./fonts/fr-title.ttf');
+}
+@font-face {
+    font-family: futuramaBold;
+    src: url('./fonts/fr-bold.ttf');
+}
 
 body {
+    font-family: futuramaBold;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -23,7 +32,7 @@ img {
 
 .calculator,
 .calculator * {
-    transition: background .75s;
+    transition: background .5s;
 }
 
 .calculator {
@@ -42,7 +51,7 @@ img {
     margin-bottom: .5rem;
     border: 1px solid var(--nord0);
     border-radius: 5px;
-    transition: .75s;
+    transition: .5s;
 }
 
 .calculator__keys {
@@ -69,7 +78,7 @@ img {
     color: var(--nord6);
     border: 1px solid var(--nord0);
     border-radius: 5px;
-    transition: .25s;
+    transition: .5s;
 }
 
 .number:hover,
@@ -145,9 +154,13 @@ img {
 }
 .multiply {
     grid-area: multiply;
+    font-weight: 900;
+    font-size: larger;
 }
 .divide {
     grid-area: divide;
+    font-weight: 900;
+    font-size: larger;
 }
 .subtract {
     grid-area: subtract;
@@ -175,14 +188,14 @@ img {
 }
 
 .light-theme {
-    background: var(--nord7);
+    background: var(--nord7); /* #6cdc9d */
     /* background: linear-gradient(var(--nord14), var(--nord4)); */
-    transition: .75s;
+    transition: .5s;
 }
 
 .light-theme .header1 {
     color: #b36d11;
-    transition: .75s;
+    transition: .5s;
 }
 
 .light-theme .calculator {
